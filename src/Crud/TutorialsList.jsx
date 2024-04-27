@@ -4,10 +4,9 @@ import {
   useReactTable,
 } from '@tanstack/react-table';
 import React from 'react';
-import './table.css';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
-
+import '../App.css';
 const TutorialsList = ({ data, columns }) => {
   const table = useReactTable({
     data,

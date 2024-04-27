@@ -46,7 +46,7 @@ const AddTutorial = () => {
   }, [state, formik]);
 
   return (
-    <div style={{ display: '', justifyContent: 'center', }}>
+    <div style={{ display: 'flex', justifyContent: 'center' }}>
       <form onSubmit={formik.handleSubmit}>
         <input
           type='text'

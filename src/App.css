@@ -2,3 +2,7 @@ tr td {
   border: 1px solid tomato;
   padding: 10px;
 }
+/* tr,
+th {
+  border: 1px solid darkgoldenrod;
+} */

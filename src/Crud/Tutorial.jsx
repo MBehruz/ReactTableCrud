@@ -1,3 +1,21 @@
+/*
+
+import React from 'react';
+import './App.css';
+import Root from './router/root';
+function App() {
+  return (
+    <div>
+      <p>App</p>
+      <Root />
+    </div>
+  );
+}
+
+export default App;
+
+*/
+
 import React, { useEffect, useState } from 'react';
 import TutorialsList from './TutorialsList';
 import axios from 'axios';
