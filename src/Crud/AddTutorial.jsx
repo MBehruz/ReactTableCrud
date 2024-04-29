@@ -2,6 +2,7 @@ import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import '../App.css';
+import TutorialService from '../services/TutorialService';
 const AddTutorial = () => {
   const { state } = useLocation();
   const navigate = useNavigate();
@@ -24,13 +25,11 @@ const AddTutorial = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (state && state.id) {
-      axios
-        .put(`http://localhost:8080/users/${state.id}`, formData)
+      TutorialService.edit(`${state.id}`, formData)
         .then((res) => console.log(res.data))
         .catch((err) => console.log(err));
     } else {
-      axios
-        .post('http://localhost:8080/users', formData)
+      TutorialService.create(formData)
         .then((res) => console.log(res.data))
         .catch((err) => console.log(err));
     }

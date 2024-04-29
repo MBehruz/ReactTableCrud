@@ -1,3 +1,4 @@
+import '../App.css';
 import {
   flexRender,
   getCoreRowModel,
@@ -6,8 +7,7 @@ import {
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { RiDeleteBin5Fill, RiEditFill } from 'react-icons/ri';
-import axios from 'axios';
-import '../App.css';
+import TutorialService from '../services/TutorialService';
 const TutorialsList = ({ data, columns }) => {
   const table = useReactTable({
     data,
@@ -21,8 +21,7 @@ const TutorialsList = ({ data, columns }) => {
   };
 
   const handleDelete = (rowData) => {
-    axios.delete(`http://localhost:8080/users/${rowData.id}`);
-    // .then((resp) => console.log(resp))
+    TutorialService.delete(`${rowData.id}`);
     window.location.reload().catch((err) => console.log(err));
   };
 

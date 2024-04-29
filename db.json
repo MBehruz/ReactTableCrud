@@ -1,13 +1,6 @@
 {
   "users": [
     {
-      "first_name": "Bexruz",
-      "last_name": "Muxammadjonov",
-      "email": "alibek@gmail.com",
-      "gender": "female",
-      "id": "1a96"
-    },
-    {
       "first_name": "tst",
       "last_name": "tst",
       "email": "alibek@gmail.com",
@@ -15,11 +8,11 @@
       "id": "2bbf"
     },
     {
-      "first_name": "Bexruz",
+      "first_name": "dde",
       "last_name": "Muxammadjonov",
-      "email": "muxammadjonovbexruz01@gmail.com",
-      "gender": "male",
-      "id": "0cf3"
+      "email": "demo@minimals.cc",
+      "gender": "female",
+      "id": "7ca2"
     }
   ]
 }

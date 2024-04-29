@@ -18,13 +18,12 @@ export default App;
 
 import React, { useEffect, useState } from 'react';
 import TutorialsList from './TutorialsList';
-import axios from 'axios';
+import TutorialService from '../services/TutorialService';
 const Tutorial = () => {
   const [data, setData] = useState([]);
 
   const fetchData = () => {
-    axios
-      .get('http://localhost:8080/users')
+    TutorialService.getAll()
       .then((res) => setData(res.data))
       .catch((err) => console.log(err));
   };
