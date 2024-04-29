@@ -1,9 +1,9 @@
 import React from 'react';
 import Root from './router/root';
+import './App.css';
 function App() {
   return (
-    <div>
-      <p>App</p>
+    <div className='app'>
       <Root />
     </div>
   );

@@ -42,7 +42,10 @@ const Tutorial = () => {
 
   return (
     <div style={{ display: 'flex', justifyContent: 'center' }}>
-      <TutorialsList data={data} columns={columns} />
+      {
+        data ? (
+          <TutorialsList data={data} columns={columns} />
+        ) : <p>Loading...</p>}
     </div>
   );
 };

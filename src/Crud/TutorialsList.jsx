@@ -5,6 +5,7 @@ import {
 } from '@tanstack/react-table';
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
+import { RiDeleteBin5Fill, RiEditFill } from 'react-icons/ri';
 import axios from 'axios';
 import '../App.css';
 const TutorialsList = ({ data, columns }) => {
@@ -20,15 +21,16 @@ const TutorialsList = ({ data, columns }) => {
   };
 
   const handleDelete = (rowData) => {
-    axios
-      .delete(`http://localhost:8080/users/${rowData.id}`)
-      .then((resp) => console.log(resp))
-      .catch((err) => console.log(err));
+    axios.delete(`http://localhost:8080/users/${rowData.id}`);
+    // .then((resp) => console.log(resp))
+    window.location.reload().catch((err) => console.log(err));
   };
 
   return (
     <div>
-      <button onClick={() => navigate('/add')}>Add</button>
+      <button className='addTBTN' onClick={() => navigate('/add')}>
+        Add
+      </button>
       <table>
         <thead>
           {table.getHeaderGroups().map((headerGroup) => (
@@ -54,9 +56,17 @@ const TutorialsList = ({ data, columns }) => {
                 </td>
               ))}
               <td>
-                <button onClick={() => handleEdit(row.original)}>Edit</button>
-                <button onClick={() => handleDelete(row.original)}>
-                  Delete
+                <button
+                  className='addTBTN'
+                  onClick={() => handleEdit(row.original)}
+                >
+                  <RiEditFill />
+                </button>
+                <button
+                  className='addTBTN'
+                  onClick={() => handleDelete(row.original)}
+                >
+                  <RiDeleteBin5Fill />
                 </button>
               </td>
             </tr>

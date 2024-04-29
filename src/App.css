@@ -1,8 +1,66 @@
+.app {
+  margin-top: 50px;
+}
 tr td {
-  border: 1px solid tomato;
+  border: 1px solid rgb(208, 169, 163);
   padding: 10px;
 }
-/* tr,
 th {
-  border: 1px solid darkgoldenrod;
-} */
+  border: 1px solid tan;
+  padding: 10px;
+}
+.addTBTN {
+  margin-bottom: 5px;
+  border: 1px solid floralwhite;
+  background-color: white;
+  font-size: large;
+}
+.addTBTN:hover {
+  border: 1px solid darkcyan;
+  border-radius: 3px;
+}
+
+/* Add page */
+.containerAdd {
+  margin-top: 20px;
+  justify-content: center;
+  display: flex;
+}
+
+.containerAdd form {
+  display: flex;
+  flex-direction: column;
+  padding-top: 10%;
+}
+
+.containerAdd input {
+  margin-bottom: 10px;
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+.containerAdd select {
+  margin-bottom: 10px;
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.containerAdd button {
+  padding: 8px 16px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  display: flex;
+}
+.btn {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.containerAdd button:hover {
+  background-color: #0056b3;
+}
