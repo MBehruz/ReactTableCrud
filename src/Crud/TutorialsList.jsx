@@ -22,7 +22,7 @@ const TutorialsList = ({ data, columns }) => {
   const handleDelete = (rowData) => {
     axios
       .delete(`http://localhost:8080/users/${rowData.id}`)
-      .then((resp) => console.log())
+      .then((resp) => console.log(resp))
       .catch((err) => console.log(err));
   };
 
