@@ -44,8 +44,7 @@ const AddTutorial = () => {
 
   useEffect(() => {
     if (state) {
-      axios
-        .get(`http://localhost:8080/users/${state.id}`)
+      TutorialService.getOne(`${state.id}`)
         .then((res) => {
           const { first_name, last_name, email, gender } = res.data;
           setFormData({ first_name, last_name, email, gender });
